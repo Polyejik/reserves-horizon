@@ -615,10 +615,12 @@ section {
 
 /* ── motion ─────────────────────────────────────────────── */
 
-.reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
-.reveal.is-in { opacity: 1; transform: none; }
+/* Скрываем блоки ТОЛЬКО когда JS подтверждённо работает (класс js-reveal).
+   Без JS или при сбое наблюдателя содержимое остаётся видимым. */
+.js-reveal .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+.js-reveal .reveal.is-in { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
-  .reveal { opacity: 1; transform: none; }
+  .js-reveal .reveal { opacity: 1; transform: none; }
 }

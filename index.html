@@ -330,20 +330,29 @@
 </footer>
 
 <script>
+  // Появление блоков при прокрутке. Безопасно: если скрипт не отработает
+  // или наблюдатель не сработает за 2,5 с — содержимое показывается принудительно.
   (function () {
-    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var items = document.querySelectorAll('.problem__cols, .tier-grid, .protocol__steps, .cap-grid, .engage__grid, .contact__grid');
-    if (reduce || !('IntersectionObserver' in window)) {
-      items.forEach(function (el) { el.classList.add('is-in'); });
-      return;
-    }
+    if (!items.length) return;
+
+    function show(el) { el.classList.add('is-in'); }
+    function showAll() { items.forEach(show); }
+
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || !('IntersectionObserver' in window)) { showAll(); return; }
+
+    document.documentElement.classList.add('js-reveal');
     items.forEach(function (el) { el.classList.add('reveal'); });
+
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+        if (e.isIntersecting) { show(e.target); io.unobserve(e.target); }
       });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
     items.forEach(function (el) { io.observe(el); });
+
+    setTimeout(showAll, 2500);
   })();
 </script>
 </body>

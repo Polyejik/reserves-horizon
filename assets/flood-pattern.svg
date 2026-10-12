@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Waterflood well pattern: injectors allocating voidage to producers within a radius of influence">
+<rect width="640" height="400" fill="#0B0D10"/>
+<circle cx="220" cy="200" r="190" fill="#C9A961" opacity="0.05"/>
+<circle cx="220" cy="200" r="190" fill="none" stroke="#8A7440" stroke-width="1" stroke-dasharray="3 5" opacity="0.6"/>
+<circle cx="460" cy="200" r="190" fill="#C9A961" opacity="0.05"/>
+<circle cx="460" cy="200" r="190" fill="none" stroke="#8A7440" stroke-width="1" stroke-dasharray="3 5" opacity="0.6"/>
+<line x1="220" y1="200" x2="90" y2="120" stroke="#C9A961" stroke-width="1.09" opacity="0.26"/>
+<line x1="220" y1="200" x2="90" y2="280" stroke="#C9A961" stroke-width="1.09" opacity="0.26"/>
+<line x1="220" y1="200" x2="340" y2="80" stroke="#C9A961" stroke-width="0.91" opacity="0.21"/>
+<line x1="220" y1="200" x2="340" y2="200" stroke="#C9A961" stroke-width="1.44" opacity="0.34"/>
+<line x1="220" y1="200" x2="340" y2="320" stroke="#C9A961" stroke-width="0.91" opacity="0.21"/>
+<line x1="460" y1="200" x2="340" y2="80" stroke="#C9A961" stroke-width="0.91" opacity="0.21"/>
+<line x1="460" y1="200" x2="340" y2="200" stroke="#C9A961" stroke-width="1.44" opacity="0.34"/>
+<line x1="460" y1="200" x2="340" y2="320" stroke="#C9A961" stroke-width="0.91" opacity="0.21"/>
+<line x1="460" y1="200" x2="600" y2="120" stroke="#C9A961" stroke-width="1.00" opacity="0.24"/>
+<line x1="460" y1="200" x2="600" y2="280" stroke="#C9A961" stroke-width="1.00" opacity="0.24"/>
+<rect x="214.5" y="194.5" width="11" height="11" fill="#0B0D10" stroke="#EDE8DF" stroke-width="1.7"/>
+<rect x="454.5" y="194.5" width="11" height="11" fill="#0B0D10" stroke="#EDE8DF" stroke-width="1.7"/>
+<circle cx="90" cy="120" r="5.6" fill="#EDE8DF"/>
+<circle cx="90" cy="280" r="5.6" fill="#EDE8DF"/>
+<circle cx="340" cy="80" r="5.6" fill="#EDE8DF"/>
+<circle cx="340" cy="200" r="5.6" fill="#EDE8DF"/>
+<circle cx="340" cy="320" r="5.6" fill="#EDE8DF"/>
+<circle cx="600" cy="120" r="5.6" fill="#EDE8DF"/>
+<circle cx="600" cy="280" r="5.6" fill="#EDE8DF"/>
+<rect x="30" y="26" width="10" height="10" fill="#0B0D10" stroke="#EDE8DF" stroke-width="1.6"/>
+<text x="48.0" y="35.0" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#A8A296" text-anchor="start" letter-spacing="0.08em" font-weight="400">injector</text>
+<circle cx="35" cy="53" r="5" fill="#EDE8DF"/>
+<text x="48.0" y="57.0" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#A8A296" text-anchor="start" letter-spacing="0.08em" font-weight="400">producer</text>
+<circle cx="35" cy="78" r="5" fill="none" stroke="#8A7440" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="48.0" y="82.0" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#C9A961" text-anchor="start" letter-spacing="0.08em" font-weight="400">radius of influence</text>
+<text x="30.0" y="382.0" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="9.5" fill="#6E6A63" text-anchor="start" letter-spacing="0.08em" font-weight="400">injection allocated by distance to the lateral, permeability and net pay</text>
+</svg>

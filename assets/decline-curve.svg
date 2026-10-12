@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" role="img" aria-label="Hyperbolic decline curve: rate against time; initial rate 1000, decline 0.28 per year, exponent 1.15">
+<rect width="640" height="380" fill="#0B0D10"/>
+<g stroke="#22262D" stroke-width="1">
+<line x1="66" y1="328.0" x2="614" y2="328.0"/>
+<line x1="66" y1="260.3" x2="614" y2="260.3"/>
+<line x1="66" y1="192.5" x2="614" y2="192.5"/>
+<line x1="66" y1="124.8" x2="614" y2="124.8"/>
+<line x1="66" y1="57.1" x2="614" y2="57.1"/>
+</g>
+<g stroke="#22262D" stroke-width="1" stroke-dasharray="2 5">
+<line x1="66.0" y1="30" x2="66.0" y2="328"/>
+<line x1="157.3" y1="30" x2="157.3" y2="328"/>
+<line x1="248.7" y1="30" x2="248.7" y2="328"/>
+<line x1="340.0" y1="30" x2="340.0" y2="328"/>
+<line x1="431.3" y1="30" x2="431.3" y2="328"/>
+<line x1="522.7" y1="30" x2="522.7" y2="328"/>
+<line x1="614.0" y1="30" x2="614.0" y2="328"/>
+</g>
+<polygon points="66.00,57.09 70.57,64.45 75.13,71.40 79.70,77.97 84.27,84.18 88.83,90.07 93.40,95.66 97.97,100.98 102.53,106.05 107.10,110.87 111.67,115.48 116.23,119.88 120.80,124.09 125.37,128.12 129.93,131.98 134.50,135.69 139.07,139.25 143.63,142.67 148.20,145.96 152.77,149.12 157.33,152.17 161.90,155.11 166.47,157.95 171.03,160.69 175.60,163.34 180.17,165.89 184.73,168.37 189.30,170.76 193.87,173.08 198.43,175.32 203.00,177.50 207.57,179.61 212.13,181.66 216.70,183.65 221.27,185.58 225.83,187.46 230.40,189.28 234.97,191.06 239.53,192.78 244.10,194.46 248.67,196.10 253.23,197.69 257.80,199.24 262.37,200.76 266.93,202.23 271.50,203.67 276.07,205.08 280.63,206.45 285.20,207.78 289.77,209.09 294.33,210.37 298.90,211.62 303.47,212.83 308.03,214.03 312.60,215.19 317.17,216.33 321.73,217.45 326.30,218.54 330.87,219.61 335.43,220.66 340.00,221.69 344.57,222.69 349.13,223.67 353.70,224.64 358.27,225.59 362.83,226.51 367.40,227.42 371.97,228.32 376.53,229.19 381.10,230.05 385.67,230.89 390.23,231.72 394.80,232.54 399.37,233.33 403.93,234.12 408.50,234.89 413.07,235.64 417.63,236.39 422.20,237.12 426.77,237.84 431.33,238.54 435.90,239.24 440.47,239.92 445.03,240.59 449.60,241.25 454.17,241.91 458.73,242.55 463.30,243.17 467.87,243.79 472.43,244.40 477.00,245.01 481.57,245.60 486.13,246.18 490.70,246.75 495.27,247.32 499.83,247.88 504.40,248.42 508.97,248.97 513.53,249.50 518.10,250.02 522.67,250.54 527.23,251.05 531.80,251.55 536.37,252.05 540.93,252.54 545.50,253.02 550.07,253.50 554.63,253.97 559.20,254.43 563.77,254.89 568.33,255.34 572.90,255.78 577.47,256.22 582.03,256.66 586.60,257.08 591.17,257.51 595.73,257.92 600.30,258.34 604.87,258.74 609.43,259.14 614.00,259.54 614.00,328.00 66.00,328.00" fill="#C9A961" opacity="0.07"/>
+<polyline points="66.00,57.09 70.57,64.45 75.13,71.40 79.70,77.97 84.27,84.18 88.83,90.07 93.40,95.66 97.97,100.98 102.53,106.05 107.10,110.87 111.67,115.48 116.23,119.88 120.80,124.09 125.37,128.12 129.93,131.98 134.50,135.69 139.07,139.25 143.63,142.67 148.20,145.96 152.77,149.12 157.33,152.17 161.90,155.11 166.47,157.95 171.03,160.69 175.60,163.34 180.17,165.89 184.73,168.37 189.30,170.76 193.87,173.08 198.43,175.32 203.00,177.50 207.57,179.61 212.13,181.66 216.70,183.65 221.27,185.58 225.83,187.46 230.40,189.28 234.97,191.06 239.53,192.78 244.10,194.46 248.67,196.10 253.23,197.69 257.80,199.24 262.37,200.76 266.93,202.23 271.50,203.67 276.07,205.08 280.63,206.45 285.20,207.78 289.77,209.09 294.33,210.37 298.90,211.62 303.47,212.83 308.03,214.03 312.60,215.19 317.17,216.33 321.73,217.45 326.30,218.54 330.87,219.61 335.43,220.66 340.00,221.69 344.57,222.69 349.13,223.67 353.70,224.64 358.27,225.59 362.83,226.51 367.40,227.42 371.97,228.32 376.53,229.19 381.10,230.05 385.67,230.89 390.23,231.72 394.80,232.54 399.37,233.33 403.93,234.12 408.50,234.89 413.07,235.64 417.63,236.39 422.20,237.12 426.77,237.84 431.33,238.54 435.90,239.24 440.47,239.92 445.03,240.59 449.60,241.25 454.17,241.91 458.73,242.55 463.30,243.17 467.87,243.79 472.43,244.40 477.00,245.01 481.57,245.60 486.13,246.18 490.70,246.75 495.27,247.32 499.83,247.88 504.40,248.42 508.97,248.97 513.53,249.50 518.10,250.02 522.67,250.54 527.23,251.05 531.80,251.55 536.37,252.05 540.93,252.54 545.50,253.02 550.07,253.50 554.63,253.97 559.20,254.43 563.77,254.89 568.33,255.34 572.90,255.78 577.47,256.22 582.03,256.66 586.60,257.08 591.17,257.51 595.73,257.92 600.30,258.34 604.87,258.74 609.43,259.14 614.00,259.54" fill="none" stroke="#C9A961" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="66" y1="328" x2="614" y2="328" stroke="#39404A" stroke-width="1"/>
+<line x1="66" y1="30" x2="66" y2="328" stroke="#39404A" stroke-width="1"/>
+<text x="56.0" y="331.5" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#6E6A63" text-anchor="end" letter-spacing="0.08em" font-weight="400">0</text>
+<text x="56.0" y="263.8" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#6E6A63" text-anchor="end" letter-spacing="0.08em" font-weight="400">250</text>
+<text x="56.0" y="196.0" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#6E6A63" text-anchor="end" letter-spacing="0.08em" font-weight="400">500</text>
+<text x="56.0" y="128.3" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#6E6A63" text-anchor="end" letter-spacing="0.08em" font-weight="400">750</text>
+<text x="56.0" y="60.6" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#6E6A63" text-anchor="end" letter-spacing="0.08em" font-weight="400">1000</text>
+<text x="66.0" y="346.0" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#6E6A63" text-anchor="middle" letter-spacing="0.08em" font-weight="400">0</text>
+<text x="157.3" y="346.0" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#6E6A63" text-anchor="middle" letter-spacing="0.08em" font-weight="400">2</text>
+<text x="248.7" y="346.0" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#6E6A63" text-anchor="middle" letter-spacing="0.08em" font-weight="400">4</text>
+<text x="340.0" y="346.0" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#6E6A63" text-anchor="middle" letter-spacing="0.08em" font-weight="400">6</text>
+<text x="431.3" y="346.0" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#6E6A63" text-anchor="middle" letter-spacing="0.08em" font-weight="400">8</text>
+<text x="522.7" y="346.0" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#6E6A63" text-anchor="middle" letter-spacing="0.08em" font-weight="400">10</text>
+<text x="614.0" y="346.0" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#6E6A63" text-anchor="middle" letter-spacing="0.08em" font-weight="400">12</text>
+<text x="56.0" y="19.0" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#A8A296" text-anchor="end" letter-spacing="0.08em" font-weight="500">rate</text>
+<text x="614.0" y="366.0" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#6E6A63" text-anchor="end" letter-spacing="0.08em" font-weight="400">time, years</text>
+<circle cx="66.0" cy="57.1" r="3" fill="#C9A961"/>
+<text x="76.0" y="48.1" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#EDE8DF" text-anchor="start" letter-spacing="0.08em" font-weight="400">qi = 1000</text>
+<text x="403.9" y="246.7" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#C9A961" text-anchor="start" letter-spacing="0.08em" font-weight="400">hyperbolic decline</text>
+<text x="403.9" y="261.7" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#6E6A63" text-anchor="start" letter-spacing="0.08em" font-weight="400">Di = 0.28 /yr</text>
+<text x="403.9" y="276.7" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#6E6A63" text-anchor="start" letter-spacing="0.08em" font-weight="400">b = 1.15</text>
+</svg>

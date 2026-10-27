@@ -6,9 +6,6 @@
 <title>Reserves Horizon — A fast second opinion on subsurface and wells</title>
 <meta name="description" content="An independent second opinion from a bench with more than a hundred years of combined experience: drilling, completions, reservoir, production and surface facilities, in the difficult regions.">
 <meta name="theme-color" content="#0B0D10">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -328,39 +325,27 @@
         </p>
       </div>
 
-      <!-- FormSubmit.co. Адрес получателя не лежит в разметке открытым текстом:
-           он собирается скриптом из частей и подставляется в action при загрузке.
-           Первое письмо требует подтверждения адреса (одноразовая ссылка). -->
-      <form class="form" id="lead-form" method="POST"
-            data-p1="a3V0dXpvdmFw" data-p2="QGdtYWls" data-p3="LmNvbQ==">
-        <input type="hidden" name="_subject" value="Second opinion request — reserves-horizon.com">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://www.reserves-horizon.com/#sent">
-        <input type="hidden" name="_blacklist" value="seo services, backlink, guest post, casino, viagra, crypto giveaway, loan offer">
-        <!-- приманка для ботов: люди это поле не видят и не заполняют -->
-        <input type="text" name="_honey" tabindex="-1" autocomplete="off"
-               style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
+      <!-- Nothing is collected here. The page composes a mailto: link in the
+           browser; the visitor sends the message from their own mail client. -->
+      <div class="form brief" id="brief">
+        <p class="brief__intro">Fill three lines, and the page opens your own mail app with the
+          text ready. Nothing is sent to this site.</p>
         <div class="field">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" autocomplete="name" required>
+          <label for="b-name">Name</label>
+          <input id="b-name" type="text" autocomplete="name" placeholder="Your name">
         </div>
         <div class="field">
-          <label for="company">Company</label>
-          <input id="company" name="company" type="text" autocomplete="organization" required>
+          <label for="b-company">Company</label>
+          <input id="b-company" type="text" autocomplete="organization" placeholder="Company or asset">
         </div>
         <div class="field">
-          <label for="email">Work email</label>
-          <input id="email" name="email" type="email" autocomplete="email" required>
+          <label for="b-brief">The decision in front of you</label>
+          <textarea id="b-brief" rows="4" placeholder="Asset, formation, what has to be decided, and by when."></textarea>
         </div>
-        <div class="field">
-          <label for="brief">The decision in front of you</label>
-          <textarea id="brief" name="brief" rows="4"
-            placeholder="Asset, formation, what has to be decided, and by when."></textarea>
-        </div>
-        <button class="btn btn--solid btn--full" type="submit">Send</button>
-        <p class="form__note">We reply from a named person, not a mailbox.</p>
-        <p class="form__sent" id="sent" hidden>Received. The bench will come back to you directly.</p>
-      </form>
+        <button class="btn btn--solid btn--full" type="button" id="b-open">Open in my mail app</button>
+        <p class="form__note">Your mail app opens with the text filled in. You press send there, so
+          the message never passes through this page.</p>
+      </div>
     </div>
   </section>
 
@@ -372,7 +357,8 @@
       <span class="wordmark__mark" aria-hidden="true"></span>
       <span class="wordmark__text">Reserves<span class="wordmark__thin">&nbsp;Horizon</span></span>
     </p>
-    <p class="footer__meta">Independent second opinion · PRMS 2018 · SEC</p>
+    <p class="footer__meta">Independent second opinion · PRMS 2018 · SEC ·
+      <a class="footer__link" href="privacy.html">Privacy</a></p>
     <p class="footer__copy">© 2026 Reserves Horizon</p>
   </div>
 </footer>
@@ -403,32 +389,32 @@
     setTimeout(showAll, 2500);
   })();
 
-  // Подтверждение отправки после редиректа FormSubmit.
+  // Конструктор письма: собирает mailto прямо в браузере, ничего не отправляет.
   (function () {
-    if (location.hash !== '#sent') return;
-    var el = document.getElementById('sent');
-    if (el) { el.hidden = false; el.scrollIntoView({ block: 'center' }); }
-  })();
+    var btn = document.getElementById('b-open');
+    if (!btn) return;
+    var to = 'contact@reserves-horizon.com';
 
-  // Форма: адрес получателя собирается на клиенте, в разметке его нет.
-  // Плюс два фильтра: скрытая приманка и слишком быстрое заполнение.
-  (function () {
-    var form = document.getElementById('lead-form');
-    if (!form) return;
+    btn.addEventListener('click', function () {
+      var name = (document.getElementById('b-name').value || '').trim();
+      var company = (document.getElementById('b-company').value || '').trim();
+      var brief = (document.getElementById('b-brief').value || '').trim();
 
-    var parts = [form.dataset.p1, form.dataset.p2, form.dataset.p3].join('');
-    var endpoint = 'https://formsubmit.co/' + atob(parts);
-    form.setAttribute('action', endpoint);
+      var body = [];
+      if (name) body.push('Name: ' + name);
+      if (company) body.push('Company: ' + company);
+      body.push('');
+      body.push(brief || '');
+      body.push('');
+      body.push('--');
+      body.push('Sent from reserves-horizon.com');
 
-    var opened = Date.now();
-
-    form.addEventListener('submit', function (e) {
-      var honey = form.querySelector('input[name="_honey"]');
-      var tooFast = Date.now() - opened < 4000;
-      if ((honey && honey.value) || tooFast) {
-        e.preventDefault();
-        window.location.hash = 'sent';
-      }
+      var subject = 'Second opinion — ' + (company || name || 'request');
+      var href = 'mailto:' + to +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body.join('\n'));
+      window.__mailto = href;
+      window.location.href = href;
     });
   })();
 </script>

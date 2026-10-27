@@ -49,7 +49,6 @@
         <dl class="ledger">
           <div class="ledger__row"><dt>Combined experience</dt><dd>100+ years</dd></div>
           <div class="ledger__row"><dt>Coverage</dt><dd>bit to processing train</dd></div>
-          <div class="ledger__row"><dt>First read</dt><dd><span class="dot dot--gold"></span>48 hours</dd></div>
           <div class="ledger__row"><dt>Regions</dt><dd>Arctic, desert, deepwater</dd></div>
           <div class="ledger__row"><dt>Signed work</dt><dd>named engineer</dd></div>
         </dl>
@@ -88,8 +87,8 @@
       <div class="col">
         <p class="col__num">03</p>
         <h3>Nobody has time to re-derive it</h3>
-        <p>Full review takes a quarter. By the time it lands, the decision has been made on the
-          original number.</p>
+        <p>A proper review swallows the decision window. By the time it lands, the choice has already
+          been made on the original number.</p>
       </div>
     </div>
   </section>
@@ -120,7 +119,7 @@
         <header class="tier__head">
           <p class="tier__tag">Tier 01</p>
           <h3>Fast read</h3>
-          <p class="tier__promise">Two specialists, 48 hours</p>
+          <p class="tier__promise">Two specialists, one short written opinion</p>
         </header>
         <ul class="tier__list">
           <li>Your question read by two disciplines, not one</li>
@@ -287,8 +286,8 @@
       <div class="plans">
         <article class="plan">
           <h3>Standing bench</h3>
-          <p class="plan__term">The same team on call for your asset, month after month — so the
-            second question costs you a phone call, not a procurement cycle.</p>
+          <p class="plan__term">The same team on call for your asset, so the second question costs you a
+            phone call rather than a procurement cycle.</p>
         </article>
         <article class="plan">
           <h3>Signed review</h3>
@@ -296,8 +295,8 @@
             touches, one named signature, the working file attached.</p>
         </article>
         <p class="plans__note">Scope sets the work and the work sets the fee, so we agree both after
-          the first conversation. We take a limited number of new benches each quarter — the
-          constraint is expert time, and we would rather say it than pretend otherwise.</p>
+          the first conversation. The constraint is expert time, and we would rather say that
+          than pretend otherwise.</p>
       </div>
     </div>
   </section>
@@ -329,12 +328,15 @@
         </p>
       </div>
 
-      <!-- FormSubmit.co: заявки уходят письмом на contact@reserves-horizon.com.
+      <!-- FormSubmit.co. Адрес получателя не лежит в разметке открытым текстом:
+           он собирается скриптом из частей и подставляется в action при загрузке.
            Первое письмо требует подтверждения адреса (одноразовая ссылка). -->
-      <form class="form" action="https://formsubmit.co/contact@reserves-horizon.com" method="POST">
-        <input type="hidden" name="_subject" value="Новая заявка с сайта reserves-horizon.com">
+      <form class="form" id="lead-form" method="POST"
+            data-p1="a3V0dXpvdmFw" data-p2="QGdtYWls" data-p3="LmNvbQ==">
+        <input type="hidden" name="_subject" value="Second opinion request — reserves-horizon.com">
         <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://www.reserves-horizon.com/#contact">
+        <input type="hidden" name="_next" value="https://www.reserves-horizon.com/#sent">
+        <input type="hidden" name="_blacklist" value="seo services, backlink, guest post, casino, viagra, crypto giveaway, loan offer">
         <!-- приманка для ботов: люди это поле не видят и не заполняют -->
         <input type="text" name="_honey" tabindex="-1" autocomplete="off"
                style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
@@ -357,6 +359,7 @@
         </div>
         <button class="btn btn--solid btn--full" type="submit">Send</button>
         <p class="form__note">We reply from a named person, not a mailbox.</p>
+        <p class="form__sent" id="sent" hidden>Received. The bench will come back to you directly.</p>
       </form>
     </div>
   </section>
@@ -398,6 +401,35 @@
     items.forEach(function (el) { io.observe(el); });
 
     setTimeout(showAll, 2500);
+  })();
+
+  // Подтверждение отправки после редиректа FormSubmit.
+  (function () {
+    if (location.hash !== '#sent') return;
+    var el = document.getElementById('sent');
+    if (el) { el.hidden = false; el.scrollIntoView({ block: 'center' }); }
+  })();
+
+  // Форма: адрес получателя собирается на клиенте, в разметке его нет.
+  // Плюс два фильтра: скрытая приманка и слишком быстрое заполнение.
+  (function () {
+    var form = document.getElementById('lead-form');
+    if (!form) return;
+
+    var parts = [form.dataset.p1, form.dataset.p2, form.dataset.p3].join('');
+    var endpoint = 'https://formsubmit.co/' + atob(parts);
+    form.setAttribute('action', endpoint);
+
+    var opened = Date.now();
+
+    form.addEventListener('submit', function (e) {
+      var honey = form.querySelector('input[name="_honey"]');
+      var tooFast = Date.now() - opened < 4000;
+      if ((honey && honey.value) || tooFast) {
+        e.preventDefault();
+        window.location.hash = 'sent';
+      }
+    });
   })();
 </script>
 </body>

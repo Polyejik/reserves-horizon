@@ -632,3 +632,13 @@ section {
   * { animation: none !important; transition: none !important; }
   .js-reveal .reveal { opacity: 1; transform: none; }
 }
+
+/* confirmation line after a submitted lead */
+.form__sent {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--gold-dim);
+  border-radius: 3px;
+  color: var(--gold);
+  font-size: 14px;
+}
